@@ -1,0 +1,352 @@
+.space5 {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.space5.light {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.space5.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.space5 h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.space5 h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.space5 button {
+  background-color: #82c596;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.space5 button:hover {
+  background-color: #5f9e74;
+}
+
+.space5 .board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.space5 .square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #333;
+  font-size: 24px;
+  height: 80px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.space5 .square.X {
+  color: #f44336;
+}
+
+.space5 .square.O {
+  color: #4caf50;
+}
+
+.space5 .square:hover {
+  background-color: #eee;
+}
+
+.space5 .game-mode {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.space5 .game-mode button {
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  gap: 20px;
+  width: 120px;
+  height: 60px;
+  transition: background-color 0.3s ease;
+}
+
+.space5 .game-mode button.active {
+  background-color: #f50057;
+}
+
+.space5 .winner {
+  margin-top: 20px;
+}
+
+.space5 .winner button {
+  margin-top: 10px;
+}
+
+.space5 .theme-toggle {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.space5 .theme-toggle span {
+  margin-right: 10px;
+}
+
+.space5 .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.space5 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.space5 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.space5 .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.space5 input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.space5 input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.space5 input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.space5 .slider.round {
+  border-radius: 20px;
+}
+
+.space5 .slider.round:before {
+  border-radius: 50%;
+}
+
+.card {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  min-height: 300px;
+  margin-bottom: 20px;
+}
+
+.card h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
+
+.card .board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card .square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #333;
+  font-size: 24px;
+  height: 80px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card .square.X {
+  color: #f44336;
+}
+
+.card .square.O {
+  color: #4caf50;
+}
+
+.card .square:hover {
+  background-color: #eee;
+}
+
+.card .game-mode {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.card .game-mode button {
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  gap: 20px;
+  width: 120px;
+  height: 60px;
+  transition: background-color 0.3s ease;
+}
+
+.card .game-mode button.active {
+  background-color: #f50057;
+}
+
+.card .winner {
+  margin-top: 20px;
+}
+
+.card .winner button {
+  margin-top: 10px;
+}
+
+.card .theme-toggle {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .theme-toggle span {
+  margin-right: 10px;
+}
+
+.card .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.card .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.card .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.card .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.card input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.card input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.card input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.card .slider.round {
+  border-radius: 20px;
+}
+
+.card .slider.round:before {
+  border-radius: 50%;
+}

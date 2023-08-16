@@ -1,0 +1,291 @@
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+.tarjeta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.3vh;
+  margin-bottom: 60px;
+}
+
+.tarjeta-front {
+  padding: 3px;
+  background-color: #f2f2f2;
+  border-radius: 9px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.slogan-prompt {
+  padding: 10px;
+  text-align: center;
+  margin-top: 15px;
+  color: #6c9a2b;
+  justify-items: center;
+}
+
+.description-subtext {
+  text-align: left;
+}
+
+.service-description {
+  color: #666;
+  text-align: left;
+}
+
+.emoji {
+  display: inline-block;
+  animation: snakeMove 3s infinite alternate;
+}
+
+@keyframes snakeMove {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+.ultra {
+  display: inline-block;
+  animation: ultraAnimation 9s infinite;
+}
+
+.ultra-head {
+  height: 40vh; 
+  margin-bottom: -15px;
+}
+
+.ultracobra-banner {
+  border-radius: 20%;
+  margin: 0.3rem;
+  width: 25%;
+}
+
+@keyframes ultraAnimation {
+  0% {
+    color: black;
+  }
+  50% {
+    color: gold;
+  }
+  100% {
+    color: rgb(110, 64, 197);
+  }
+}
+
+.line-text
+
+.fun-line {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.service {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+}
+
+.service-title {
+  align-items: left;
+}
+
+.prompt-text {
+  color: #561414;
+}
+
+.service-separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.service-price {
+  white-space: nowrap;
+}
+
+.service-price-button {
+  background-color: #ecc756;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+}
+
+.service-price-button:hover {
+  background-color: #addcad;
+}
+
+.cta-button {
+  background-color: #6c9a2b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #8cc63e;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  color: #addcad;
+  margin-bottom: 15px;
+}
+
+.column {
+  padding: 20px;
+  border: 1px solid #21be24a5;
+  border-radius: 10px;
+  background-color: #addcad;
+  transition: background-color 0.3s ease;
+}
+
+.column:hover {
+  background-color: #d7c55b;
+}
+
+.technologies-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.technologies-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.technologies-list li svg {
+  margin-right: 5px;
+}
+
+.footer-container {
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+
+.footer-container ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; 
+  margin: 0;
+}
+
+.footer-container li {
+  display: flex;
+  margin-right: 10px;
+  justify-content: space-between;
+  margin-right: 15px;
+}
+
+.footer-logos {
+  text-align: center;
+  display: grid;
+  margin: 0;
+  justify-items: center;
+}
+
+.footer-signature {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.footer-signature-u {
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .slogan-prompt {
+    text-align: center;
+    color: #6c9a2b;
+    justify-items: center;
+  }
+  .emoji {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 767px) {
+  .emoji {
+    display: none;
+  }
+  .technologies-list {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .ultra-head {
+    height: 45vh; 
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    color: #addcad; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .button {
+    /* Styles for smaller devices */
+    /* Adjust the height, padding, or other properties as needed */
+    height: 30px;
+    padding: 5px 10px;
+  }
+  .tarjeta-front {
+    padding: 2px;
+    background-color: #f2f2f2;
+    border-radius: 9px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .ultracobra-banner {
+  border-radius: 20%;
+  margin-top: 2rem;
+}
+
+@keyframes ultraAnimation {
+  0% {
+    color: black;
+  }
+  50% {
+    color: gold;
+  }
+  100% {
+    color: rgb(110, 64, 197);
+  }
+}
+}
