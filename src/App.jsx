@@ -46,8 +46,8 @@ export const App = () => {
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Digital love, life and joy in just one place with ultracobra Ⓤ 🐍</title>
-          <meta name="description" content="Ultracobra website on Netlify" />
+          <title>Digital love, life and joy in just one place with ultraspace Ⓤ 🐍</title>
+          <meta name="description" content="Ultraspace website" />
           <meta property="og:image" content="https://i.imgur.com/cCphed4.png" />
         </Helmet>
         <Header />
