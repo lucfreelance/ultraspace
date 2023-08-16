@@ -29,17 +29,17 @@ const Header = () => {
     <header>
       <h1>
         <Link to="/" onClick={handleLogoClick}>
-          <span className="ultra">Ⓤ</span> ultracobra{' '}
+          <span className="ultra">Ⓤ</span> ultraspace{' '}
         </Link>
         <Link to="/Pitch">
-          <span className="emoji">🐍</span>
+          <span className="emoji">🚀</span>
         </Link>
       </h1>
       <TarjetaFront />
       <div>
         <motion.img
           src={isTransitioned ? UltraHead2 : UltraHead1}
-          alt="Relax and contact ultracobra services"
+          alt="Relax and see ultraspaces just for fun"
           className={`ultra-head ${isTransitioned ? 'transitioned' : ''}`}
           onClick={toggleTransition}
           initial="initial"
