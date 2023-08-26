@@ -18,7 +18,7 @@ const Space5 = () => {
   }, [turn, winner, gameMode]);
 
   useEffect(() => {
-    if (winner && winner === 'X') {
+    if (winner) {
       setShowConfetti(true);
     }
   }, [winner]);
@@ -216,7 +216,7 @@ const Space5 = () => {
           {winner === 'draw' ? (
             <h2>It is a draw!</h2>
           ) : (
-            <h2>{winner} wins! CONGRATS!</h2>
+            <h2>{winner} wins! Congratulations!</h2>
           )}
           <button onClick={resetGame}>Restart game</button>
         </div>

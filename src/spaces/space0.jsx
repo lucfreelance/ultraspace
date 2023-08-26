@@ -4,7 +4,7 @@ const Space0 = () => {
   return (
     <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
       <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>
-        Ultracobra is made with love ❤️ Feel free to share and provide feedback.
+        Ultraspace is made with love ❤️ By Lucfreelance · Feel free for feedback.
       </p>
     </div>
   );

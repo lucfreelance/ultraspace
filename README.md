@@ -30,7 +30,7 @@ Información de contacto y enlaces a perfiles de redes sociales para facilitar l
 
 ### HTML5 y CSS3 para la estructura y diseño de la página.
 
-### React.js para la creación de componentes y la gestión dinámica de la interfaz.
+###                                                  para la creación de componentes y la gestión dinámica de la interfaz.
 
 ### JavaScript para la implementación de funcionalidades interactivas y lógica del formulario.
 
@@ -102,6 +102,7 @@ The thing is I already have a linkable buttonthat change url but didn't change d
 
 # Nicer Commands
 
+- pnpm run dev to start
 - sfc to create a component
 - rfce to create a component autonamed
 
