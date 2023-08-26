@@ -29,7 +29,7 @@ const Header = () => {
     <header>
       <h1>
         <Link to="/" onClick={handleLogoClick}>
-          <span className="ultra">Ⓤ</span> ultraspace{' '}
+          <span className="ultra">Ⓤ</span> ultraspaces{' '}
         </Link>
         <Link to="/Pitch">
           <span className="emoji">🚀</span>
@@ -48,7 +48,7 @@ const Header = () => {
           transition={{ duration: isTransitioned ? 2 : 4 }}
         />
         <hr className="divisory-line" />
-        <p className="fun-line">Where you can have some fun and take a break</p>
+        <p className="fun-line">Ultraspaces is where you can have some fun and take a break</p>
       </div>
     </header>
   );
