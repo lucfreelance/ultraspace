@@ -67,31 +67,46 @@ Previous clients, we don't like to use this word...
 3. Ensure you have Node.js installed. Open a terminal and navigate to the project's root folder.
 
 4. Run the command `npm install` to install project dependencies.
+4. Run the command `npm install` to install project dependencies.
 
+5. Once completed, execute `npm start` to launch in your browser.
 5. Once completed, execute `npm start` to launch in your browser.
 
 6. You may can also follow the same steps using PNPM.
+6. You may can also follow the same steps using PNPM.
 
 ## Contact
+## Contact
 
+If you have any questions or suggestions about the Ⓤ Ultraspaces project, don't hesitate to get in touch with us:
 If you have any questions or suggestions about the Ⓤ Ultraspaces project, don't hesitate to get in touch with us:
 
 - Twitter: [@ultraspaces](https://twitter.com/ultraspaces)
 - Email: ultracobre@gmail.com
 - WhatsApp: +57 315 7742332
+- Twitter: [@ultraspaces](https://twitter.com/ultraspaces)
+- Email: ultracobre@gmail.com
+- WhatsApp: +57 315 7742332
 
+We're excited to work with you and provide top-notch digital stuff! 😊
 We're excited to work with you and provide top-notch digital stuff! 😊
 
 ## Contribution
+## Contribution
 
+If you'd like to contribute to the Ⓤ Ultraspaces project, follow these steps:
 If you'd like to contribute to the Ⓤ Ultraspaces project, follow these steps:
 
 1. Fork the repository.
+1. Fork the repository.
 
+2. Make changes or improvements in your fork.
 2. Make changes or improvements in your fork.
 
 3. Submit a pull request for us to review your changes and incorporate them into the main project.
+3. Submit a pull request for us to review your changes and incorporate them into the main project.
 
+We appreciate any contribution and look forward to reviewing and collaborating with you.
 We appreciate any contribution and look forward to reviewing and collaborating with you.
 
 # Trouble Chapter
@@ -101,7 +116,9 @@ We appreciate any contribution and look forward to reviewing and collaborating w
 - useState / useEffect and some other hooks I still increase abstract leveling to in the core of this sofisticated practice. I'll looking over codes and tutorials to at last habg on on this!
 
 ## Implementing roting for Netlify setup
+## Implementing roting for Netlify setup
 
+Create a file in folder ./public/redirects with this:
 Create a file in folder ./public/redirects with this:
 
 ./public/redirects

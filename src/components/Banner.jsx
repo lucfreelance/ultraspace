@@ -1,10 +1,10 @@
-import UltracobraBanner from '../img/ultracobra-banner.png';
+import UltraspacesBanner from '../img/ultraspaces-banner.png';
 import '../App.css';
 
 const Banner = () => {
   return (
     <div>
-      <img src={UltracobraBanner} alt="UltracobraBanner" className="ultracobra-banner" />
+      <img src={UltraspacesBanner} alt="UltraspacesBanner" className="ultraspaces-banner" />
     </div>
   );
 };
