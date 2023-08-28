@@ -1,72 +1,98 @@
-    # Ⓤ ultracobra
+# Welcome to \***\*Ⓤultraspaces\*\***
 
-# How to run / start / launch / deploy
+```asciiart
+UU   UU  LL    TTTTTT  RRRRRR     A
+UU   UU  LL      TT    RR   RR   A A
+UU   UU  LL      TT    RRRRRR   AAAAA
+UU   UU  LL      TT    RR  RR  A     A
+ UUUUU   LLLLLL  TT    RR  RR A       A
+SSSSS PPPPPP    A     CCCCC EEEEE SSSSS
+SS    PP   PP  A A    CC    EE    SS
+SSSSS PPPPPP  AAAAA   CC    EEEEE SSSSS
+   SS PP     A     A  CC    EE       SS
+SSSSS PP    A       A CCCCC EEEEE SSSSS
+```
 
-npm run dev
+Welcome to Ultraspaces, brought to you by Lucfreelance. Our website offers a refreshing escape for those seeking a touch of amusement and relaxation.
 
-## Descripción del proyecto
+Indulge yourself by exploring Ultraspaces, a platform designed to provide a delightful reprieve from the ordinary. Step away from the daily grind and immerse yourself in a space that radiates creativity and innovation.
 
-ultracobra es una página de servicios digitales que ofrece soluciones y servicios en el ámbito digital. El objetivo principal de este proyecto es proporcionar a los clientes una variedad de servicios de alta calidad, desde desarrollo de aplicaciones web y móviles hasta generación de contenido y asistencia virtual.
+At Ultraspaces, we invite you to experience a world where coding meets ingenuity. Unlike traditional business ventures, our focus isn't on selling products, but rather on providing you with an enjoyable journey through the realm of technology and design.
 
-## Características destacadas
+If you find yourself intrigued by the components showcased on our platform, consider reaching out to us. Whether you're searching for captivating code snippets or intricate design solutions, Ultraspaces offers a haven for those eager to delve into the world of development.
 
-Programación: Desarrollamos aplicaciones web y móviles, creamos sitios web modernos, optimizamos páginas web y ofrecemos servicios de migración e integración de accesibilidad.
+Ready to take a break on a journey of exploration? Visit https://ultraspaces.netlify.app/ and open the door to an universe where imagination knows no bounds.
 
-### Contenidos: Generamos contenido atractivo y de calidad para blogs, redes sociales y sitios web. Además, nos encargamos de la redacción y edición de textos, y creamos estrategias de marketing de contenidos.
+## Project Description
 
-### Asistencia: Proporcionamos soporte administrativo remoto, gestionamos correos electrónicos, programamos citas, brindamos atención al cliente y realizamos diversas tareas de asistencia virtual.
+Firstly, ultraspaces was a space to practices coding with components and modules. Explore social develop principles to apply to future social media projects. Next to that, and, in a complementary way, this site are becomed in a lightspot "where you can have some fun and take a cool break".
 
-## Funcionalidades
+## Key Features
 
-Página de inicio atractiva y profesional que muestra una descripción general de los servicios ofrecidos.
+### Components
 
-Sección de servicios detallados que proporciona información específica sobre cada servicio, incluyendo una breve descripción y una lista de características.
+Builded with vanilla HTML / CSS / JS...
 
-Formulario de suscripción al boletín de noticias para que los usuarios interesados puedan recibir actualizaciones y novedades.
+### Pitches
 
-Información de contacto y enlaces a perfiles de redes sociales para facilitar la comunicación con los clientes.
+Every idea need a pitch...
 
-## Tecnologías utilizadas
+### Users
 
-### HTML5 y CSS3 para la estructura y diseño de la página.
+Previous clients, we don't like to use this word...
 
-###                                                  para la creación de componentes y la gestión dinámica de la interfaz.
+## Technologies
 
-### JavaScript para la implementación de funcionalidades interactivas y lógica del formulario.
+\*\*\* HTML5
 
-## Instalación
+\*\*\* CSS3
 
-1. Clona el repositorio de Ⓤ ultracobra en tu máquina local.
+\*\*\* Vite
 
-2. Asegúrate de tener Node.js instalado.
+\*\*\* PNPM
 
-3. Abre una terminal y navega hasta la carpeta raíz del proyecto.
+\*\*\* React
 
-4. Ejecuta el comando npm install para instalar las dependencias del proyecto.
+\*\*\* Styled Components
 
-5. Una vez que se completen las instalaciones, ejecuta el comando npm start para iniciar la aplicación en tu navegador.
+# Ultraspaces
 
-## Contribución
+## Installation
 
-Si deseas contribuir al proyecto Ⓤ ultracobra, sigue los siguientes pasos:
+1. `pnpm init` en la ruta del proyecto.
 
-Crea un fork del repositorio.
 
-Realiza los cambios o mejoras en tu fork.
+2. `pnpm init`
 
-Envía un pull request para que revisemos tus cambios y los incorporemos al proyecto principal.
+3. Ensure you have Node.js installed. Open a terminal and navigate to the project's root folder.
 
-Agradecemos cualquier contribución y estaremos encantados de revisar y colaborar contigo.
+4. Run the command `npm install` to install project dependencies.
 
-## Contacto
+5. Once completed, execute `npm start` to launch in your browser.
 
-Si tienes alguna pregunta o sugerencia sobre el proyecto Ⓤ ultracobra, no dudes en ponerte en contacto con nosotros:
+6. You may can also follow the same steps using PNPM.
 
-Twitter: @cobraultra
-Correo electrónico: ultracobre@gmail.com
-WhatsApp: +57 3166054533
+## Contact
 
-¡Estamos emocionados de trabajar contigo y ofrecerte los mejores servicios digitales! 😊
+If you have any questions or suggestions about the Ⓤ Ultraspaces project, don't hesitate to get in touch with us:
+
+- Twitter: [@ultraspaces](https://twitter.com/ultraspaces)
+- Email: ultracobre@gmail.com
+- WhatsApp: +57 315 7742332
+
+We're excited to work with you and provide top-notch digital stuff! 😊
+
+## Contribution
+
+If you'd like to contribute to the Ⓤ Ultraspaces project, follow these steps:
+
+1. Fork the repository.
+
+2. Make changes or improvements in your fork.
+
+3. Submit a pull request for us to review your changes and incorporate them into the main project.
+
+We appreciate any contribution and look forward to reviewing and collaborating with you.
 
 # Trouble Chapter
 
@@ -74,41 +100,25 @@ WhatsApp: +57 3166054533
 
 - useState / useEffect and some other hooks I still increase abstract leveling to in the core of this sofisticated practice. I'll looking over codes and tutorials to at last habg on on this!
 
-# Ⓤ ultracobra
+## Implementing roting for Netlify setup
 
-Página de SERVICIOS DIGITALES de @ultracobra
-
-Checa mis ofertas en forobeta.com/ultracobra
-
-https://forobeta.com/members/ultracobra.179278/
-
-u u l ttttttttt rrrrr aaaaa  
-u u l tt r r a a
-u u l tt r r aaaaaa
-u u l tt rrrrr a a
-u u l tt r r a a
-uuu llll tt r r a a
-ccccc oooooo bbbbbb rrrrr aaaaa
-c o o b b r r a a
-c o o b b r r aaaaaa
-c o o bbbbbbb rrrrr a a
-c o o b b r r a a
-ccccc oooooo bbbbbb r r a a
-
-#
-
-User
-The thing is I already have a linkable buttonthat change url but didn't change dom as expected, or, even if I buy like is working now, I need a function that jump to deployed content bellow Home content, take a look
-
-# Nicer Commands
-
-- pnpm run dev to start
-- sfc to create a component
-- rfce to create a component autonamed
-
-# Implementing roting for Netlify setup
-
-Creat a file in folder ./public/redirects with this:
+Create a file in folder ./public/redirects with this:
 
 ./public/redirects
 /\* /index.html 200
+
+## Testing
+
+-
+
+## Deploy
+
+- Netlify
+  Remember to create a file in folder ./public/redirects
+
+## Nice Commands
+
+- `pnpm run dev` to start
+- `pnpm run build` to build
+- `sfc` to create a component
+- `rfce` to create an autonamed component
