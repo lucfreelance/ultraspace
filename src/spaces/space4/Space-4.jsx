@@ -184,49 +184,55 @@ const Space4 = () => {
           gravity={0.1}
         />
       )}
-      <h1>Ultra Tic Tac Toe</h1>
-      <h2>Play against the robot or 2 humans cons. better.</h2>
-      <div className="game-mode">
-        <button
-          className={gameMode === 'machine' ? 'active' : ''}
-          onClick={() => handleGameModeChange('machine')}
-        >
-          Against Robot
-        </button>
-        <button
-          className={gameMode === 'twoPlayers' ? 'active' : ''}
-          onClick={() => handleGameModeChange('twoPlayers')}
-        >
-          2 Players cons.
-        </button>
-      </div>
-      <div className="board">
-        {board.map((value, index) => (
-          <div
-            key={index}
-            className={`square ${value}`}
-            onClick={() => handleClick(index)}
-          >
-            {value}
+      <div className="grid-container">
+        <div className="grid-left">
+          <h1>Ultra Tic Tac Toe</h1>
+          <h2>Play against the robot or 2 humans cons. better.</h2>
+          <div className="game-mode">
+            <button
+              className={gameMode === 'machine' ? 'active' : ''}
+              onClick={() => handleGameModeChange('machine')}
+            >
+              Against Robot
+            </button>
+            <button
+              className={gameMode === 'twoPlayers' ? 'active' : ''}
+              onClick={() => handleGameModeChange('twoPlayers')}
+            >
+              2 Players cons.
+            </button>
           </div>
-        ))}
-      </div>
-      {winner && (
-        <div className="winner">
-          {winner === 'draw' ? (
-            <h2>It is a draw!</h2>
-          ) : (
-            <h2>{winner} wins! Congratulations!</h2>
-          )}
-          <button onClick={resetGame}>Restart game</button>
+          <div className="theme-toggle">
+            <span>Toggle Theme: </span>
+            <label className="switch">
+              <input type="checkbox" checked={darkMode} onChange={handleThemeChange} />
+              <span className="slider round"></span>
+            </label>
+          </div>
         </div>
-      )}
-      <div className="theme-toggle">
-        <span>Toggle Theme: </span>
-        <label className="switch">
-          <input type="checkbox" checked={darkMode} onChange={handleThemeChange} />
-          <span className="slider round"></span>
-        </label>
+        <div className="grid-right">
+          <div className="board">
+            {board.map((value, index) => (
+              <div
+                key={index}
+                className={`square ${value}`}
+                onClick={() => handleClick(index)}
+              >
+                {value}
+              </div>
+            ))}
+          </div>
+          {winner && (
+            <div className="winner">
+              {winner === 'draw' ? (
+                <h2>It is a draw!</h2>
+              ) : (
+                <h2>{winner} wins! Congratulations!</h2>
+              )}
+              <button onClick={resetGame}>Restart game</button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
