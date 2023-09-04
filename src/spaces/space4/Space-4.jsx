@@ -1,3 +1,6 @@
+
+
+
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 import './Space4.css';
@@ -18,8 +21,12 @@ const Space4 = () => {
   }, [turn, winner, gameMode]);
 
   useEffect(() => {
-    if (winner) {
+    if (winner === 'draw') {
+      setShowConfetti(false);
+    } else if (winner) {
       setShowConfetti(true);
+    } else {
+      setShowConfetti(false);
     }
   }, [winner]);
 
@@ -186,20 +193,22 @@ const Space4 = () => {
       )}
       <div className="grid-container">
         <div className="grid-left">
-          <h1>Ultra Tic Tac Toe</h1>
-          <h2>Play against the robot or 2 humans cons. better.</h2>
-          <div className="game-mode">
-            <button
-              className={gameMode === 'machine' ? 'active' : ''}
-              onClick={() => handleGameModeChange('machine')}
-            >
-              Against Robot
-            </button>
-            <button
-              className={gameMode === 'twoPlayers' ? 'active' : ''}
-              onClick={() => handleGameModeChange('twoPlayers')}
-            >
-              2 Players cons.
+      <h1>Ultra Tic Tac Toe Minimax</h1>
+      <small>based on the 1921 algorithm by E. Borel - You're never beat the robot. Or, proof this is not right...</small>
+      <h2>Play against the robot or 2 players each cons.</h2>
+        <p><small>You're invited to start or pick playing mode...</small></p>
+      <div className="game-mode">
+        <button
+          className={gameMode === 'machine' ? 'active' : ''}
+          onClick={() => handleGameModeChange('machine')}
+        >
+          U against the robot
+        </button>
+        <button
+          className={gameMode === 'twoPlayers' ? 'active' : ''}
+          onClick={() => handleGameModeChange('twoPlayers')}
+        >
+          2 players each cons.
             </button>
           </div>
           <div className="theme-toggle">

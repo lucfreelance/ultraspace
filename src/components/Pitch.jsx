@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaGrinBeam, FaGem } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const PitchSection = styled.section`
@@ -48,21 +48,20 @@ const Pitch = () => {
           <IntroContent>
             <FaHeart size={32} />
           </IntroContent>
-          <PitchText>Love, life, and joy in just one place</PitchText>
+          <PitchText>Love, life, and joy in just an ultraplace</PitchText>
         </PitchCard>
         <PitchCard to="/" onClick={() => console.log("Card 2 clicked")}>
           <IntroContent>
-            <FaHeart size={32} />
+            <FaGem size={32} />
           </IntroContent>
-          <PitchText>Life, joy, and love in just one place</PitchText>
+          <PitchText>Life, joy, and love in just one ultraplace</PitchText>
         </PitchCard>
         <PitchCard to="/" onClick={() => console.log("Card 3 clicked")}>
           <IntroContent>
-            <FaHeart size={32} />
+            <FaGrinBeam size={32} />
           </IntroContent>
-          <PitchText>Joy, love, and life in just one place</PitchText>
+          <PitchText>Joy, love, and life in just 1 ultraplace</PitchText>
         </PitchCard>
-        {/* Agrega más PitchCards aquí si es necesario */}
       </PitchSection>
     </>
   );
