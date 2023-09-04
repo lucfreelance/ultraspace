@@ -1,71 +1,234 @@
-import React, { useState } from 'react';
-import confetti from 'canvas-confetti';
-import { TURNS } from './constants.js';
-import { checkWinnerFrom, checkEndGame } from './logic/board.js';
-import { WinnerModal } from './cpn/WinnerModal.jsx';
-import { saveGameToStorage, resetGameStorage } from './logic/storage/index.js';
-import TicTacToe from './TicTacToe.jsx';
-import { Square } from './cpn/Square.jsx';
+import { useState, useEffect } from 'react';
+import Confetti from 'react-confetti';
+import './Space4.css';
 
 const Space4 = () => {
-  const [board, setBoard] = useState(() => {
-    const boardFromStorage = window.localStorage.getItem('board');
-    return boardFromStorage ? JSON.parse(boardFromStorage) : Array(9).fill(null);
-  });
-
-  const [turn, setTurn] = useState(() => {
-    const turnFromStorage = window.localStorage.getItem('turn');
-    return turnFromStorage || TURNS.X;
-  });
-
+  const [board, setBoard] = useState(Array(9).fill(null));
+  const [turn, setTurn] = useState('X');
   const [winner, setWinner] = useState(null);
+  const [gameMode, setGameMode] = useState('machine');
+  const [darkMode, setDarkMode] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [robotBadMoveCount, setRobotBadMoveCount] = useState(0);
 
-  const resetGame = () => {
-    setBoard(Array(9).fill(null));
-    setTurn(TURNS.X);
-    setWinner(null);
-    resetGameStorage();
-  };
+  useEffect(() => {
+    if (gameMode === 'machine' && turn === 'O' && !winner) {
+      setTimeout(makeAIMove, 500);
+    }
+  }, [turn, winner, gameMode]);
 
-  const updateBoard = (index) => {
+  useEffect(() => {
+    if (winner) {
+      setShowConfetti(true);
+    }
+  }, [winner]);
+
+  const handleClick = (index) => {
     if (board[index] || winner) return;
 
     const newBoard = [...board];
     newBoard[index] = turn;
     setBoard(newBoard);
 
-    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
+    const newTurn = turn === 'X' ? 'O' : 'X';
     setTurn(newTurn);
 
-    saveGameToStorage({
-      board: newBoard,
-      turn: newTurn,
-    });
-
-    const newWinner = checkWinnerFrom(newBoard);
+    const newWinner = checkWinner(newBoard);
     if (newWinner) {
-      confetti();
       setWinner(newWinner);
-    } else if (checkEndGame(newBoard)) {
-      setWinner(false);
     }
   };
 
+  const makeAIMove = () => {
+    const bestMove = gameMode === 'machine' ? findBestMove() : getRandomMove();
+    handleClick(bestMove);
+  };
+
+  const findBestMove = () => {
+    let bestScore = -Infinity;
+    let bestMove = null;
+
+    for (let i = 0; i < board.length; i++) {
+      if (!board[i]) {
+        board[i] = 'O';
+        const score = minimax(board, 0, false);
+        board[i] = null;
+
+        if (score > bestScore) {
+          bestScore = score;
+          bestMove = i;
+        }
+      }
+    }
+
+    return bestMove;
+  };
+
+  const minimax = (board, depth, isMaximizing) => {
+    const scores = {
+      X: -1,
+      O: 1,
+      draw: 0,
+    };
+
+    const result = checkWinner(board);
+
+    if (result) {
+      return scores[result];
+    }
+
+    if (isMaximizing) {
+      let bestScore = -Infinity;
+      for (let i = 0; i < board.length; i++) {
+        if (!board[i]) {
+          board[i] = 'O';
+          const score = minimax(board, depth + 1, false);
+          board[i] = null;
+          bestScore = Math.max(score, bestScore);
+        }
+      }
+      return bestScore;
+    } else {
+      let bestScore = Infinity;
+      for (let i = 0; i < board.length; i++) {
+        if (!board[i]) {
+          board[i] = 'X';
+          const score = minimax(board, depth + 1, true);
+          board[i] = null;
+          bestScore = Math.min(score, bestScore);
+        }
+      }
+      return bestScore;
+    }
+  };
+
+  const getRandomMove = () => {
+    const availableMoves = [];
+    for (let i = 0; i < board.length; i++) {
+      if (!board[i]) {
+        availableMoves.push(i);
+      }
+    }
+    return availableMoves[Math.floor(Math.random() * availableMoves.length)];
+  };
+
+  const checkWinner = (board) => {
+    const winningCombos = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+
+    for (const combo of winningCombos) {
+      const [a, b, c] = combo;
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        return board[a];
+      }
+    }
+
+    if (!board.includes(null)) {
+      return 'draw';
+    }
+
+    return null;
+  };
+
+  const resetGame = () => {
+    setBoard(Array(9).fill(null));
+    setTurn('X');
+    setWinner(null);
+    setShowConfetti(false);
+    setRobotBadMoveCount(0);
+  };
+
+  const handleGameModeChange = (mode) => {
+    setGameMode(mode);
+    resetGame();
+  };
+
+  const handleThemeChange = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const getThemeClass = () => {
+    return darkMode ? 'dark' : 'light';
+  };
+
+  const isRobotBadMove = () => {
+    return gameMode === 'machine' && robotBadMoveCount < 8 && Math.random() < 0.9;
+  };
+
+  const updateRobotBadMoveCount = () => {
+    if (isRobotBadMove()) {
+      setRobotBadMoveCount(robotBadMoveCount + 1);
+    }
+  };
+
+  useEffect(() => {
+    updateRobotBadMoveCount();
+  }, [turn]);
+
   return (
-    <main className="board">
-      <h1>Tic tac toe</h1>
-      <button onClick={resetGame}>Reset del juego</button>
-      <section className="game">
-        <TicTacToe board={board} updateBoard={updateBoard} />
-      </section>
-
-      <section className="turn">
-        <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
-        <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
-      </section>
-
-      <WinnerModal resetGame={resetGame} winner={winner} />
-    </main>
+    <div className={`Space4 card ${getThemeClass()}`}>
+      {showConfetti && winner && (
+        <Confetti
+          width={window.innerWidth}
+          height={window.innerHeight + 600}
+          recycle={false}
+          numberOfPieces={600}
+          gravity={0.1}
+        />
+      )}
+      <h1>Ultra Tic Tac Toe</h1>
+      <h2>Play against the robot or 2 humans cons. better.</h2>
+      <div className="game-mode">
+        <button
+          className={gameMode === 'machine' ? 'active' : ''}
+          onClick={() => handleGameModeChange('machine')}
+        >
+          Against Robot
+        </button>
+        <button
+          className={gameMode === 'twoPlayers' ? 'active' : ''}
+          onClick={() => handleGameModeChange('twoPlayers')}
+        >
+          2 Players cons.
+        </button>
+      </div>
+      <div className="board">
+        {board.map((value, index) => (
+          <div
+            key={index}
+            className={`square ${value}`}
+            onClick={() => handleClick(index)}
+          >
+            {value}
+          </div>
+        ))}
+      </div>
+      {winner && (
+        <div className="winner">
+          {winner === 'draw' ? (
+            <h2>It is a draw!</h2>
+          ) : (
+            <h2>{winner} wins! Congratulations!</h2>
+          )}
+          <button onClick={resetGame}>Restart game</button>
+        </div>
+      )}
+      <div className="theme-toggle">
+        <span>Toggle Theme: </span>
+        <label className="switch">
+          <input type="checkbox" checked={darkMode} onChange={handleThemeChange} />
+          <span className="slider round"></span>
+        </label>
+      </div>
+    </div>
   );
 };
 

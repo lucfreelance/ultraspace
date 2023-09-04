@@ -1,4 +1,4 @@
-.space5 {
+.Space4 {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -7,27 +7,27 @@
   margin: 0 auto;
 }
 
-.space5.light {
+.Space4.light {
   background-color: #f1f1f1;
   color: #333;
 }
 
-.space5.dark {
+.Space4.dark {
   background-color: #333;
   color: #fff;
 }
 
-.space5 h1 {
+.Space4 h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-.space5 h2 {
+.Space4 h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.space5 button {
+.Space4 button {
   background-color: #82c596;
   color: #fff;
   border: none;
@@ -37,11 +37,11 @@
   cursor: pointer;
 }
 
-.space5 button:hover {
+.Space4 button:hover {
   background-color: #5f9e74;
 }
 
-.space5 .board {
+.Space4 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -49,7 +49,7 @@
   margin-right: 20px;
 }
 
-.space5 .square {
+.Space4 .square {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,19 +62,19 @@
   transition: background-color 0.3s ease;
 }
 
-.space5 .square.X {
+.Space4 .square.X {
   color: #f44336;
 }
 
-.space5 .square.O {
+.Space4 .square.O {
   color: #4caf50;
 }
 
-.space5 .square:hover {
+.Space4 .square:hover {
   background-color: #eee;
 }
 
-.space5 .game-mode {
+.Space4 .game-mode {
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -82,7 +82,7 @@
   margin-top: 20px;
 }
 
-.space5 .game-mode button {
+.Space4 .game-mode button {
   background-color: #3f51b5;
   color: #fff;
   border: none;
@@ -97,43 +97,43 @@
   transition: background-color 0.3s ease;
 }
 
-.space5 .game-mode button.active {
+.Space4 .game-mode button.active {
   background-color: #f50057;
 }
 
-.space5 .winner {
+.Space4 .winner {
   margin-top: 20px;
 }
 
-.space5 .winner button {
+.Space4 .winner button {
   margin-top: 10px;
 }
 
-.space5 .theme-toggle {
+.Space4 .theme-toggle {
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.space5 .theme-toggle span {
+.Space4 .theme-toggle span {
   margin-right: 10px;
 }
 
-.space5 .switch {
+.Space4 .switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
 }
 
-.space5 .switch input {
+.Space4 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.space5 .slider {
+.Space4 .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -145,7 +145,7 @@
   border-radius: 20px;
 }
 
-.space5 .slider:before {
+.Space4 .slider:before {
   position: absolute;
   content: "";
   height: 14px;
@@ -157,23 +157,23 @@
   border-radius: 50%;
 }
 
-.space5 input:checked + .slider {
+.Space4 input:checked + .slider {
   background-color: #2196f3;
 }
 
-.space5 input:focus + .slider {
+.Space4 input:focus + .slider {
   box-shadow: 0 0 1px #2196f3;
 }
 
-.space5 input:checked + .slider:before {
+.Space4 input:checked + .slider:before {
   transform: translateX(20px);
 }
 
-.space5 .slider.round {
+.Space4 .slider.round {
   border-radius: 20px;
 }
 
-.space5 .slider.round:before {
+.Space4 .slider.round:before {
   border-radius: 50%;
 }
 
