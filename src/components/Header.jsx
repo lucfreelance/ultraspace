@@ -50,7 +50,7 @@ const Header = () => {
       <div>
         <motion.img
           src={images[currentImageIndex]}
-          alt="Relax and see ultraspaces just for fun"
+          alt="Ultraspaces is where you can have some fun and take a break"
           className={`ultra-head transitioned`}
           onClick={toggleTransition}
           initial="initial"
@@ -58,8 +58,7 @@ const Header = () => {
           variants={transitionVariants}
           transition={{ duration: 2 }}
         />
-        <hr className="divisory-line" />
-        <p className="fun-line">Ultraspaces is where you can have some fun and take a break</p>
+        <p className="fun-line">Ultraspaces is where have fun and take cool break</p>
       </div>
     </header>
   );

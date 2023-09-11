@@ -7,7 +7,7 @@ import Spaces from './spaces/Spaces';
 import Pitch from './components/Pitch';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import Space5 from './spaces/space5/Space-5.jsx';
+import Space5 from './spaces/space5/Space-5.jsx';
 import Space4 from './spaces/space4/Space-4.jsx';
 import Space3 from './spaces/space3/Space-3.jsx';
 import Space2 from './spaces/space2/Space-2.jsx';
@@ -56,7 +56,7 @@ export const App = () => {
           <Routes>
             <Route path="/spaces" element={<Spaces />} />
             {/* <Route path="/spaces/space6" element={<Space6 />} /> */}
-            {/* <Route path="/spaces/space5" element={<Space5 />} /> */}
+            <Route path="/spaces/space5" element={<Space5 />} />
             <Route path="/spaces/space4" element={<Space4 />} />
             <Route path="/spaces/space3" element={<Space3 />} />
             <Route path="/spaces/space2" element={<Space2 />} />
@@ -65,6 +65,7 @@ export const App = () => {
           </Routes>
         </main>
         <Contact />
+        <hr className="divisory-line" />
         <Footer />
       </div>
     </BrowserRouter>

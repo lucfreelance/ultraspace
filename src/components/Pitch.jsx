@@ -48,19 +48,19 @@ const Pitch = () => {
           <IntroContent>
             <FaHeart size={32} />
           </IntroContent>
-          <PitchText>Love, life, and joy in just an ultraplace</PitchText>
+          <PitchText>Love, life, and joy in just one ultraspace</PitchText>
         </PitchCard>
         <PitchCard to="/" onClick={() => console.log("Card 2 clicked")}>
           <IntroContent>
             <FaGem size={32} />
           </IntroContent>
-          <PitchText>Life, joy, and love in just one ultraplace</PitchText>
+          <PitchText>Life, joy, and love in just 1 ultraspace</PitchText>
         </PitchCard>
         <PitchCard to="/" onClick={() => console.log("Card 3 clicked")}>
           <IntroContent>
             <FaGrinBeam size={32} />
           </IntroContent>
-          <PitchText>Joy, love, and life in just 1 ultraplace</PitchText>
+          <PitchText>Joy, love, and life in just an ultraspace</PitchText>
         </PitchCard>
       </PitchSection>
     </>

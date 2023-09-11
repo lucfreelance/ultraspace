@@ -10,8 +10,10 @@ const CardContainer = styled.div`
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  width: 768px;
+  height: 768px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 500px) {
     flex-direction: column;
     align-items: center;
   }
@@ -139,7 +141,7 @@ const Space1 = () => {
       input7 +
       ", and they accepted! I told them we could have a great time doing something cool like " +
       input8 +
-      " and I suggested betting on who pays for dinner 😊. Guess who won? The answer is obvious, Watson... 🍺🍛😂🤣🍛🍺";
+      " and I suggested betting on who pays for dinner. Guess who won? The answer is obvious, Watson... 🍺😂🤣";
     setResult(sumaInputs);
   };
 

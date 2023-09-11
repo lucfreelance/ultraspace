@@ -3,11 +3,10 @@ import { useEffect, useState } from 'react';
 
 const Container = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   min-height: 100vh;
   background-color: #f2f2f2;
-  margin-bottom: 20px;
 `;
 
 const Card = styled.div`
@@ -16,6 +15,9 @@ const Card = styled.div`
   align-items: center;
   padding: 20px;
   background-color: transparent;
+  max-width: 768px;
+  width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -26,14 +28,14 @@ const Title = styled.h1`
   font-size: 28px;
   margin-bottom: 10px;
   text-align: center;
-  color: #222; /* Set the color for dark mode */
+  color: #222;
 `;
 
 const Subtitle = styled.h2`
   font-size: 18px;
   margin-bottom: 20px;
   text-align: center;
-  color: #777; /* Set the color for dark mode */
+  color: #777;
 `;
 
 const Image = styled.img`
@@ -84,7 +86,7 @@ const Space3 = () => {
         <Button type="button" onClick={handleClick}>
           ¡Give me another 😺!
         </Button>
-        <Image id="img-cat" src={catImageUrl} alt="Random cat by thecatapi.com" type="Random cat by thecatapi dot com" />
+        <Image id="img-cat" src={catImageUrl} alt="Random cat by thecatapi.com" />
       </Card>
     </Container>
   );
