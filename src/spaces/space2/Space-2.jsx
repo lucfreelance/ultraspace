@@ -126,10 +126,10 @@ return paragraphs[randomIndex];
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Ultraspaces</title>
+      <title>Return to sender - Ultraspaces</title>
       <meta
         name="description"
-        content="This is the Blog component from @ultracobra"
+        content="This is the space component for Ultraspaces from Ultracobra"
       />
       <meta property="og:image" content="https://i.imgur.com/cCphed4.png" />
     </Helmet>
@@ -142,13 +142,13 @@ return paragraphs[randomIndex];
           <img
             className="custom-card-image"
             src={image}
-            alt="Embark on the Journey!"
-            title="Embark on the Journey!"
+            alt="Return to sender!"
+            title="Return to sender!"
           />
           <div className="card-body">
             <p className="card-text custom-card-text">{paragraph}</p>
             <a href="#" className="btn btn-primary custom-card-button">
-              Embark on the Journey!
+              Return to sender
             </a>
           </div>
         </div>

@@ -165,7 +165,7 @@ const Space1 = () => {
           {/* Puedes agregar contenido adicional aquí si es necesario */}
         </CardMain>
         <span className="oculto"></span>     
-        <br /><br /><br /><br /><br />   
+        <br /><br /><br /><br /><br /><br /> 
         <Title>Crystal Ball Story 4 Storylovers</Title>
       </LeftColumn>
       <RightColumn>
