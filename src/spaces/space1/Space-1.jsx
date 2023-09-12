@@ -49,7 +49,7 @@ const CardHeader = styled.header`
 
 // Estilos para la imagen
 const CardImage = styled.img`
-  width: 260px;
+  width: 300px;
 `;
 
 // Estilos para el título
@@ -100,18 +100,6 @@ const ResultMessage = styled.p`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
-// Estilos para el botón de reinicio
-const StartOverButton = styled.button`
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #f44336;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: left;
-`;
-
 const Space1 = () => {
   const [input1, setInput1] = useState('');
   const [input2, setInput2] = useState('');
@@ -160,6 +148,12 @@ const Space1 = () => {
   return (
     <CardContainer>
       <LeftColumn>
+        <a
+          href="/spaces/space1"
+          className="url"
+        >
+          Crystal Ball Story
+        </a>
         <Title>Crystal Ball Story</Title>
         <CardHeader>
           <CardImage
@@ -169,11 +163,8 @@ const Space1 = () => {
           />
         </CardHeader>
         <CardMain>
-          <div>
-            {/* Puedes agregar contenido adicional aquí si es necesario */}
-          </div>
+          {/* Puedes agregar contenido adicional aquí si es necesario */}
         </CardMain>
-        <StartOverButton onClick={resetInputs}>Start over...</StartOverButton>
         <span className="oculto"></span>
       </LeftColumn>
       <RightColumn>
@@ -228,7 +219,7 @@ const Space1 = () => {
           />
           <p className="resultado">
             <ResultButton id="btnCalcular" onClick={btnOnClick}>
-              🔥 Press the button 🔥 for the story❗
+              🔥 Press the button for the story❗
             </ResultButton>
           </p>
           {result && (

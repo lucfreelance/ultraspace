@@ -184,8 +184,8 @@ const Space4 = () => {
           width={window.innerWidth}
           height={window.innerHeight + 600}
           recycle={false}
-          numberOfPieces={600}
-          gravity={0.1}
+          numberOfPieces={2000}
+          gravity={0.4}
         />
       )}
       <div className="grid-container">
