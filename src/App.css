@@ -1,22 +1,25 @@
+/* General Styles */
 #root {
-  max-width: 900px;
+  max-width: 100%; /* Cambia a 100% para hacerlo más adaptable */
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
 }
 
+/* Header */
 header {
   text-align: center;
 }
 
+/* Tarjeta Container */
 .tarjeta-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 0.3vh;
   margin-bottom: 60px;
 }
 
+/* Tarjeta Front */
 .tarjeta-front {
   padding: 3px;
   background-color: #f2f2f2;
@@ -27,6 +30,7 @@ header {
   padding-bottom: 8px;
 }
 
+/* Slogan Prompt */
 .slogan-prompt {
   padding: 10px;
   text-align: center;
@@ -35,73 +39,52 @@ header {
   justify-items: center;
 }
 
+/* Description Subtext */
 .description-subtext {
   text-align: left;
 }
 
+/* Service Description */
 .service-description {
   color: #666;
   text-align: left;
 }
 
+/* Emoji Animation */
 .emoji {
   display: inline-block;
   animation: snakeMove 3s infinite alternate;
 }
 
+/* Divisory Line */
 .divisory-line {
-  margin-bottom: 10px; 
-  margin-top: 10px; 
-  margin: 0; /* Elimina el margen predeterminado del <hr> */
-  padding: 0; /* Elimina el relleno predeterminado del <hr> */
-  border: none; /* Elimina el borde predeterminado del <hr> */
-  border-top: 1px solid #000; /* Establece un borde superior de 1 píxel sólido */
-  width: 100%; /* Hace que el <hr> ocupe todo el ancho del contenedor */
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #000;
+  width: 100%;
 }
 
-
-@keyframes snakeMove {
-  0% {
-    transform: translateX(0) rotate(0);
-  }
-  50% {
-    transform: translateX(5px) rotate(5deg);
-  }
-  100% {
-    transform: translateX(0) rotate(0);
-  }
-}
-
+/* Ultra Animation */
 .ultra {
   display: inline-block;
   animation: ultraAnimation 9s infinite;
 }
 
+/* Ultra Head */
 .ultra-head {
-  height: 40vh; 
+  height: 40vh;
   margin-bottom: -15px;
 }
 
+/* Ultraspaces Banner */
 .ultraspaces-banner {
   border-radius: 20%;
   margin: 0.3rem;
   width: 25%;
 }
 
-@keyframes ultraAnimation {
-  0% {
-    color: black;
-  }
-  50% {
-    color: gold;
-  }
-  100% {
-    color: rgb(110, 64, 197);
-  }
-}
-
-.line-text
-
+/* Fun Line */
 .fun-line {
   font-size: 18px;
   font-weight: bold;
@@ -110,6 +93,7 @@ header {
   margin: 20px 0;
 }
 
+/* Service Styles */
 .service {
   border: 1px solid #ccc;
   padding: 20px;
@@ -120,20 +104,24 @@ header {
   align-items: left;
 }
 
+/* Prompt Text */
 .prompt-text {
   color: #561414;
 }
 
+/* Service Separator */
 .service-separator {
   border: none;
   border-top: 1px solid #ccc;
   margin: 20px 0;
 }
 
+/* Service Price */
 .service-price {
   white-space: nowrap;
 }
 
+/* Service Price Button */
 .service-price-button {
   background-color: #ecc756;
   color: #ffffff;
@@ -149,6 +137,7 @@ header {
   background-color: #addcad;
 }
 
+/* CTA Button */
 .cta-button {
   background-color: #6c9a2b;
   color: #fff;
@@ -164,6 +153,7 @@ header {
   background-color: #8cc63e;
 }
 
+/* Grid Container */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -172,6 +162,7 @@ header {
   margin-bottom: 15px;
 }
 
+/* Column Styles */
 .column {
   padding: 20px;
   border: 1px solid #21be24a5;
@@ -184,6 +175,7 @@ header {
   background-color: #d7c55b;
 }
 
+/* Technologies List */
 .technologies-list {
   list-style: none;
   display: grid;
@@ -203,6 +195,7 @@ header {
   margin-right: 5px;
 }
 
+/* Footer Container */
 .footer-container {
   display: inline-block;
   margin-top: 2.5rem;
@@ -211,7 +204,7 @@ header {
 .footer-container ul {
   list-style-type: none;
   padding: 0;
-  display: flex; 
+  display: flex;
   margin: 0;
 }
 
@@ -222,6 +215,7 @@ header {
   margin-right: 15px;
 }
 
+/* Footer Logos */
 .footer-logos {
   text-align: center;
   display: grid;
@@ -229,51 +223,38 @@ header {
   justify-items: center;
 }
 
+/* Footer Signature */
 .footer-signature {
   text-align: center;
   margin-top: 10px;
   font-size: 12px;
 }
 
+/* Footer Signature - U */
 .footer-signature-u {
   font-style: italic;
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
-  .slogan-prompt {
-    text-align: center;
-    color: #6c9a2b;
-    justify-items: center;
-  }
-  .emoji {
-    display: inline-block;
-  }
-}
-
 @media (max-width: 767px) {
+  /* Hide Emoji on Small Screens */
   .emoji {
     display: none;
   }
-  .technologies-list {
+
+  /* Adjust Ultra Head Height */
+  .ultra-head {
+    height: 45vh;
+  }
+
+  /* Adjust Grid Columns for Small Screens */
+  .grid-container {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-  .ultra-head {
-    height: 45vh; 
-  }
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-    color: #addcad; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
   }
-  .button {
-    /* Styles for smaller devices */
-    /* Adjust the height, padding, or other properties as needed */
-    height: 30px;
-    padding: 5px 10px;
-  }
+
+  /* Adjust Tarjeta Front */
   .tarjeta-front {
     padding: 2px;
     background-color: #f2f2f2;
@@ -283,20 +264,24 @@ header {
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  .ultraspaces-banner {
-  border-radius: 20%;
-  margin-top: 2rem;
-}
 
-@keyframes ultraAnimation {
-  0% {
-    color: black;
+  /* Adjust Ultraspaces Banner */
+  .ultraspaces-banner {
+    border-radius: 20%;
+    margin-top: 2rem;
+    width: 50%;
   }
-  50% {
-    color: gold;
+
+  /* Keyframes for Ultra Animation */
+  @keyframes ultraAnimation {
+    0% {
+      color: black;
+    }
+    50% {
+      color: gold;
+    }
+    100% {
+      color: rgb(110, 64, 197);
+    }
   }
-  100% {
-    color: rgb(110, 64, 197);
-  }
-}
 }

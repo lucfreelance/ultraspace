@@ -14,6 +14,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   border: 2px solid #ccc; /* Agrega un borde */
+  
+  @media (max-width: 768px) {
+    /* Estilos para pantallas pequeñas */
+    width: 90vw; /* Cambia el ancho para pantallas pequeñas */
+  }
 `;
 
 const Title = styled.h1`
@@ -49,7 +54,7 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 100%;
+  width: 100%; /* Ancho del 100% para adaptarse al contenedor */
   max-height: 100%;
 `;
 
