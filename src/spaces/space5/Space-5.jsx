@@ -32,11 +32,15 @@ const Space5 = () => {
 
   return (
     <div className="Space5">
-      <h1>Nature Image</h1>
+    <a href="/spaces/space5" className="url">
+      Imanature
+    </a>
+      <h1>Imanature</h1>
+      <h2>Pick from nature images one by one or run a 'pic play'</h2>
       <div className="image-container">
         <img src={imageUrls[currentImageIndex]} alt="Nature" />
       </div>
-      <button onClick={getNextImage}>Have another image</button>
+      <button onClick={getNextImage}>Have another natural image</button>
     </div>
   );
 };

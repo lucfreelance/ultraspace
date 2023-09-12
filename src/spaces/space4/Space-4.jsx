@@ -190,7 +190,10 @@ const Space4 = () => {
       )}
       <div className="grid-container">
         <div className="grid-left">
-      <h1>Ultra Tic Tac Toe Minimax</h1>
+        <a href="/spaces/space4" className="url">
+        Ultra Tic Tac Toe
+  </a>
+      <h1>Ultra Tic Tac Toe - Minimax</h1>
       <small>based on the 1921 algorithm by E. Borel - You're never beat the robot. Or, proof this is not right...</small>
       <h2>Play against the robot or 2 players each cons.</h2>
         <p><small>You're invited to start or pick playing mode...</small></p>
