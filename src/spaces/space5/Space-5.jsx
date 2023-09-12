@@ -1,25 +1,86 @@
-import React, { useState, useEffect } from 'react';
-import './custom.css';
+import React, { useState, useEffect, useRef } from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  width: 768px;
+  height: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Title = styled.h1`
+  font-size: 24px;
+  margin-bottom: 20px;
+`;
+
+const Button = styled.button`
+  background-color: #82c596;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  &:hover {
+    background-color: #5f9e74;
+  }
+`;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Image = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+`;
 
 const Space5 = () => {
   const [imageUrls, setImageUrls] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isSlideshowRunning, setIsSlideshowRunning] = useState(false);
+
+  const slideshowIntervalRef = useRef(null);
 
   useEffect(() => {
     fetchNatureImages();
   }, []);
 
+  useEffect(() => {
+    if (isSlideshowRunning) {
+      slideshowIntervalRef.current = setInterval(() => {
+        getNextImage();
+      }, 15000);
+    } else {
+      clearInterval(slideshowIntervalRef.current);
+    }
+
+    return () => {
+      clearInterval(slideshowIntervalRef.current);
+    };
+  }, [isSlideshowRunning]);
+
   const fetchNatureImages = async () => {
     try {
-      // Realiza una solicitud a la API de Pixabay con tu clave API
       const response = await fetch('https://pixabay.com/api/?key=31310559-e87c83146d87f98b5baa7cbd0&q=nature&image_type=photo');
       const data = await response.json();
-      
-      // Asegúrate de que la respuesta contenga al menos una imagen
+
       if (data.hits && data.hits.length > 0) {
         setImageUrls(data.hits.map(hit => hit.largeImageURL));
       } else {
-        console.error('No se encontraron imágenes de naturaleza en la respuesta.');
+        console.error('No nature images found in the response.');
       }
     } catch (error) {
       console.error('Error fetching nature images:', error);
@@ -27,21 +88,36 @@ const Space5 = () => {
   };
 
   const getNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
+    setCurrentImageIndex(prevIndex => (prevIndex + 1) % imageUrls.length);
+  };
+
+  const startSlideshow = () => {
+    setIsSlideshowRunning(true);
+  };
+
+  const stopSlideshow = () => {
+    setIsSlideshowRunning(false);
   };
 
   return (
-    <div className="Space5">
-    <a href="/spaces/space5" className="url">
-      Imanature
-    </a>
-      <h1>Imanature</h1>
-      <h2>Pick from nature images one by one or run a 'pic play'</h2>
-      <div className="image-container">
-        <img src={imageUrls[currentImageIndex]} alt="Nature" />
+    <Container>
+      <a href="/spaces/space5" className="url">
+        Imanature
+      </a>
+      <Title>Imanature</Title>
+      <h2>Pick from one by one nature images or run 'Pic Play' mode</h2>
+      <ImageContainer>
+        <Image src={imageUrls[currentImageIndex]} alt="Nature" />
+      </ImageContainer>
+      <div>
+        <Button onClick={getNextImage}>Have another natural image</Button>
+        {isSlideshowRunning ? (
+          <Button onClick={stopSlideshow}>Stop Pic Play</Button>
+        ) : (
+          <Button onClick={startSlideshow}>Start Pic Play</Button>
+        )}
       </div>
-      <button onClick={getNextImage}>Have another natural image</button>
-    </div>
+    </Container>
   );
 };
 
