@@ -5,7 +5,6 @@ import './App.css';
 import Header from './components/Header';
 import Spaces from './spaces/Spaces';
 import Pitch from './components/Pitch';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Space5 from './spaces/space5/Space-5.jsx';
 import Space4 from './spaces/space4/Space-4.jsx';
@@ -47,7 +46,7 @@ export const App = () => {
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Digital love, life and joy in just one place with ultraspaces Ⓤ 🐍</title>
+          <title>Ultraspaces is where have fun and take cool break Ⓤ</title>
           <meta name="description" content="Ultraspace website" />
           <meta property="og:image" content="https://i.imgur.com/cCphed4.png" />
         </Helmet>
@@ -64,7 +63,6 @@ export const App = () => {
             <Route path="/spaces/space0" element={<Space0 />} />
           </Routes>
         </main>
-        <Contact />
         <hr className="divisory-line" />
         <Footer />
       </div>

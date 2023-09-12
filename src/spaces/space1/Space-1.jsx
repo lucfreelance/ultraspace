@@ -49,7 +49,7 @@ const CardHeader = styled.header`
 
 // Estilos para la imagen
 const CardImage = styled.img`
-  width: 300px;
+  width: 350px;
 `;
 
 // Estilos para el título
@@ -152,9 +152,8 @@ const Space1 = () => {
           href="/spaces/space1"
           className="url"
         >
-          Crystal Ball Story
-        </a>
-        <Title>Crystal Ball Story</Title>
+          Crystal Ball Story 4 Storylovers
+        </a> <br />
         <CardHeader>
           <CardImage
             src="https://i.imgur.com/V9J9qBt.png"
@@ -165,7 +164,9 @@ const Space1 = () => {
         <CardMain>
           {/* Puedes agregar contenido adicional aquí si es necesario */}
         </CardMain>
-        <span className="oculto"></span>
+        <span className="oculto"></span>     
+        <br /><br /><br /><br /><br />   
+        <Title>Crystal Ball Story 4 Storylovers</Title>
       </LeftColumn>
       <RightColumn>
         <CardMain>
@@ -219,7 +220,7 @@ const Space1 = () => {
           />
           <p className="resultado">
             <ResultButton id="btnCalcular" onClick={btnOnClick}>
-              🔥 Press the button for the story❗
+              Press the button for the story
             </ResultButton>
           </p>
           {result && (

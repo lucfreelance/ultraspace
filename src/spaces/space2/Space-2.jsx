@@ -126,7 +126,7 @@ return paragraphs[randomIndex];
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>ultracobra Ⓤ Blog 🐍</title>
+      <title>Ultraspaces</title>
       <meta
         name="description"
         content="This is the Blog component from @ultracobra"
@@ -134,7 +134,6 @@ return paragraphs[randomIndex];
       <meta property="og:image" content="https://i.imgur.com/cCphed4.png" />
     </Helmet>
       <div>
-    <br />
     <a href="/spaces/space2" className="url">Unleasher</a> {/* Agregado el enlace URL */} <br />
       <button onClick={handleChangeImage}>Change Image</button>
       <button onClick={handleChangeColor}>Change Color</button>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
   background-color: #f2f2f2;
@@ -17,7 +17,9 @@ const Card = styled.div`
   background-color: transparent;
   max-width: 768px;
   width: 100%;
+  height: 768px; /* Fijar el alto de la tarjeta a 768px */
   box-sizing: border-box;
+  overflow: hidden; /* Ocultar el desbordamiento de las imágenes */
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -26,8 +28,8 @@ const Card = styled.div`
 
 const Title = styled.h1`
   font-size: 28px;
-  margin-bottom: 10px;
-  text-align: center;
+  margin: 0;
+  text-align: left;
   color: #222;
 `;
 
@@ -40,9 +42,10 @@ const Subtitle = styled.h2`
 
 const Image = styled.img`
   width: 100%;
-  max-width: 750px;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  max-height: 768px; /* Fijar la altura máxima de la imagen a 768px */
   margin-bottom: 20px;
 `;
 
@@ -81,6 +84,10 @@ const Space3 = () => {
   return (
     <Container>
       <Card>
+        <a href="/spaces/space3" className="url">
+          Random Cats
+        </a>
+        <br />
         <Title>Random Cats 😹</Title>
         <Subtitle>Because everybody deserves a pussycat 🐈</Subtitle>
         <Button type="button" onClick={handleClick}>
