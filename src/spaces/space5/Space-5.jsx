@@ -6,17 +6,23 @@ const Container = styled.div`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   text-align: center;
-  width: 768px;
-  height: 768px;
+  width: 80vw; /* Cambiar a medida relativa */
+  max-width: 768px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid #ccc; /* Agrega un borde */
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  margin-bottom: 10px; /* Reducción del espacio inferior */
+`;
+
+const Subtitle = styled.h2`
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
   margin-bottom: 20px;
 `;
 
@@ -26,7 +32,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1rem; /* Tamaño de fuente más grande */
   cursor: pointer;
   margin: 10px;
   &:hover {
@@ -36,7 +42,7 @@ const Button = styled.button`
 
 const ImageContainer = styled.div`
   width: 100%;
-  height: 70%;
+  height: 50vh; /* Cambiar a medida relativa */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +111,7 @@ const Space5 = () => {
         Imanature
       </a>
       <Title>Imanature</Title>
-      <h2>Pick from one by one nature images or run 'Pic Play' mode</h2>
+      <Subtitle>Pick from one by one nature images or run 'Pic Play' mode</Subtitle>
       <ImageContainer>
         <Image src={imageUrls[currentImageIndex]} alt="Nature" />
       </ImageContainer>
