@@ -67,10 +67,10 @@ const Space1 = () => {
   const [message, setMessage] = useState('');
   const audioUrl =
     'https://www.elongsound.com/images/mp3/reggaedrum_09_167a_bytuneloniration.mp3'; // Reemplaza con la URL del sonido en línea
-  const imageUrl = '/src/img/ultraspaces-logo.png'; // Reemplaza con la URL de la imagen que deseas
+  const imageUrl = '/src/img/space1.webp'; // Reemplaza con la URL de la imagen que deseas
 
   const handleClick = () => {
-    setMessage('Where you can have fun and take cool breaks');
+    setMessage('Where you can have fun and take cool breaks!');
     playAudio();
   };
 
