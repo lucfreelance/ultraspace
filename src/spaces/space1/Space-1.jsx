@@ -67,7 +67,7 @@ const Space1 = () => {
   const [message, setMessage] = useState('');
   const audioUrl =
     'https://www.elongsound.com/images/mp3/reggaedrum_09_167a_bytuneloniration.mp3'; // Reemplaza con la URL del sonido en línea
-  const imageUrl = '/src/img/space1.png'; // Reemplaza con la URL de la imagen que deseas
+  const imageUrl = 'https://i.imgur.com/rNrrmlf.png'; // Reemplaza con la URL de la imagen que deseas
 
   const handleClick = () => {
     setMessage('Where you can have fun and take cool breaks!');
@@ -86,7 +86,7 @@ const Space1 = () => {
           Space [1]
         </Anchor>
         <Header>Welcome to Ultraspaces</Header>
-        <Banner src={'/src/img/space1.png'} alt="Ultraspaces friends" />
+        <Banner src={'https://i.imgur.com/rNrrmlf.png'} alt="Ultraspaces friends" />
         <Button onClick={handleClick}>
           Statement 🚀
         </Button>
