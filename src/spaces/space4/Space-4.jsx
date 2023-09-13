@@ -182,7 +182,7 @@ const Space4 = () => {
       {showConfetti && winner && (
         <Confetti
           width={window.innerWidth}
-          height={window.innerHeight + 600}
+          height={window.innerHeight + 1200}
           recycle={false}
           numberOfPieces={2000}
           gravity={0.4}
@@ -190,27 +190,9 @@ const Space4 = () => {
       )}
       <div className="grid-container">
         <div className="grid-left">
-        <a href="/spaces/space4" className="url">
-        Ultra Tic Tac Toe
-  </a>
-      <h1>Ultra Tic Tac Toe - Minimax</h1>
-      <small>based on the 1921 algorithm by E. Borel - You're never beat the robot. Or, proof this is not right...</small>
-      <h2>Play against the robot or 2 players each cons.</h2>
-        <p><small>You're invited to start or pick playing mode...</small></p>
-      <div className="game-mode">
-        <button
-          className={gameMode === 'machine' ? 'active' : ''}
-          onClick={() => handleGameModeChange('machine')}
-        >
-          You against the robot
-        </button>
-        <button
-          className={gameMode === 'twoPlayers' ? 'active' : ''}
-          onClick={() => handleGameModeChange('twoPlayers')}
-        >
-          Two players each cons.
-            </button>
-          </div>
+          <a href="/spaces/space4" className="url">
+            Ultra Minimax
+          </a>
           <div className="theme-toggle">
             <span>Toggle Theme: </span>
             <label className="switch">
@@ -218,6 +200,24 @@ const Space4 = () => {
               <span className="slider round"></span>
             </label>
           </div>
+          <h1>Ultra Minimax</h1>
+          <h2>A Tic Tac Toe based on Minimax</h2>
+          <p><small>Board game based on the 1921 algorithm by E. Borel - Bot is invincible or proof that's wrong.</small></p>
+          <div className="game-mode">
+            <button
+              className={gameMode === 'machine' ? 'active' : ''}
+              onClick={() => handleGameModeChange('machine')}
+            >
+              You vs. the robot
+            </button>
+            <button
+              className={gameMode === 'twoPlayers' ? 'active' : ''}
+              onClick={() => handleGameModeChange('twoPlayers')}
+            >
+              2 human players
+            </button>
+          </div>
+          <p><small>You're invited to start or pick playing mode</small></p>
         </div>
         <div className="grid-right">
           <div className="board">
