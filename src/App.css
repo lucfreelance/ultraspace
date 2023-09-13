@@ -237,11 +237,6 @@ header {
 }
 
 @media (max-width: 767px) {
-  /* Hide Emoji on Small Screens */
-  .emoji {
-    display: none;
-  }
-
   /* Adjust Ultra Head Height */
   .ultra-head {
     height: 45vh;

@@ -46,7 +46,7 @@ export const App = () => {
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Ultraspaces is where to have fun and take cool break Ⓤ</title>
+          <title>Ultraspaces is where you can have fun and take cool breaks Ⓤ</title>
           <meta name="description" content="Ultraspaces website" />
           <meta property="og:image" content="https://i.imgur.com/cCphed4.png" />
         </Helmet>

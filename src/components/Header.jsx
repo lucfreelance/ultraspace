@@ -58,7 +58,7 @@ const Header = () => {
           variants={transitionVariants}
           transition={{ duration: 2 }}
         />
-        <p className="fun-line">Ultraspaces is where have fun and take cool break</p>
+        <p className="fun-line">Where you can have fun and take cool breaks</p>
       </div>
     </header>
   );
