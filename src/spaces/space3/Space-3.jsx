@@ -88,12 +88,12 @@ const Space3 = () => {
           Random Cats
         </a>
         <br />
-        <Title>Random Cats 😹</Title>
-        <Subtitle>Because everybody deserves a pussycat 🐈</Subtitle>
-        <Button type="button" onClick={handleClick}>
-          ¡Give me another 😺!
-        </Button>
+        <Title>Random Cats 🐈</Title>
+        <Subtitle>Because everybody deserves a pussycat 😺</Subtitle>
         <Image id="img-cat" src={catImageUrl} alt="Random cat by thecatapi.com" />
+        <Button type="button" onClick={handleClick}>
+          ¡ 😹 Give me another !
+        </Button>
       </Card>
     </Container>
   );

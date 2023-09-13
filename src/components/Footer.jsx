@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <section className="footer-signature">
-        <span className="brand">Ⓤ Ultraspace &copy; MMXXIII</span> | Designed by{' '}
+        <span className="brand">Ⓤ Ultraspaces &copy; MMXXIII</span> | Designed by{' '}
         <a
           href="https://github.com/lucfreelance"
           alt="@lucfreelance GitHub"
@@ -80,4 +80,3 @@ const Footer = () => {
 };
 
 export default Footer;
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_XC8KYuPUiU?si=QoyaJFhXOhffHKbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

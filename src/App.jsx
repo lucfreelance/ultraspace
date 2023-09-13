@@ -3,14 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from './components/Header';
 import Spaces from './spaces/Spaces';
-// import Pitch from './components/Pitch';
 import Footer from './components/Footer';
 import Space5 from './spaces/space5/Space-5.jsx';
 import Space4 from './spaces/space4/Space-4.jsx';
 import Space3 from './spaces/space3/Space-3.jsx';
 import Space2 from './spaces/space2/Space-2.jsx';
 import Space1 from './spaces/space1/Space-1.jsx';
-import Space0 from './spaces/space0/Space-0.jsx';
 import './App.css';
 
 export const App = () => {
@@ -49,6 +47,7 @@ export const App = () => {
           <title>Ultraspaces is where you can have fun and take cool breaks Ⓤ</title>
           <meta name="description" content="Ultraspaces website" />
           <meta property="og:image" content="https://i.imgur.com/cCphed4.png" />
+          <link rel="icon" href="/src/img/favicon.ico" type="image/x-icon"></link>
         </Helmet>
         <Header />
         <main>
@@ -60,7 +59,6 @@ export const App = () => {
             <Route path="/spaces/space3" element={<Space3 />} />
             <Route path="/spaces/space2" element={<Space2 />} />
             <Route path="/spaces/space1" element={<Space1 />} />
-            <Route path="/spaces/space0" element={<Space0 />} />
           </Routes>
         </main>
         <hr className="divisory-line" />
