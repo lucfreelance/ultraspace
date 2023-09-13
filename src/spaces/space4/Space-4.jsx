@@ -202,13 +202,13 @@ const Space4 = () => {
           className={gameMode === 'machine' ? 'active' : ''}
           onClick={() => handleGameModeChange('machine')}
         >
-          U against the robot
+          You against the robot
         </button>
         <button
           className={gameMode === 'twoPlayers' ? 'active' : ''}
           onClick={() => handleGameModeChange('twoPlayers')}
         >
-          2 players each cons.
+          Two players each cons.
             </button>
           </div>
           <div className="theme-toggle">

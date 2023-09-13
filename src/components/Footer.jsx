@@ -30,9 +30,9 @@ const Footer = () => {
           oi-ia
         </a>{' | '}
         <a
-          href="https://ultraspace.vercel.app/"
-          alt="ultraspace"
-          title="ultraspace"
+          href="/"
+          alt="Ultraspaces"
+          title="Ultraspaces"
           className="author-website"
         >
           ultraspaces
@@ -45,8 +45,8 @@ const Footer = () => {
               href="https://wa.me/573157742332"
               target="_blank"
               rel="noopener noreferrer"
-              alt="WhatsApp ultraspace"
-              title="WhatsApp @ultraspace"
+              alt="WhatsApp ultraspaces"
+              title="WhatsApp @ultraspaces"
             >
               <FaWhatsapp className="footer-icon" />
             </a>
@@ -56,7 +56,7 @@ const Footer = () => {
               href="https://twitter.com/ultra__space"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Twitter ultraspace"
+              alt="Twitter ultraspaces"
               title="Twitter @ultra__space"
             >
               <FaTwitter className="footer-icon" />

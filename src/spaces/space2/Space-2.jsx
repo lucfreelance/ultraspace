@@ -73,7 +73,7 @@ const Space2 = () => {
 
 'Life unfolds as a canvas, inviting us to be artisans. Each choice and action shapes our reality, leaving a mark. Believe in the power of your unique voice, resonating with purpose. Your story is worth telling; inspire others.',
 
-'Life is a grand symphony; you hold the baton of your destiny. Infuse passion into every note. Surround yourself with harmonious relationships, gratitude for the symphony unfolding. Purpose, passion, and perseverance create a resplendent masterpiece.',
+'Life is a grand symphony; you hold the baton of your destiny. Infuse passion into every note. Surround yourself with harmonious relationships, gratitude for the purpose and perseverance to create a resplendent masterpiece.',
 
 'Within you lies untapped potential, waiting to be unleashed. Embrace the unknown, step outside your comfort zone. Moments of uncertainty reveal capabilities and hidden talents. Trust yourself; greatness awaits.',
 
@@ -126,7 +126,7 @@ return paragraphs[randomIndex];
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Return to sender - Ultraspaces</title>
+      <title>Unleasher - Ultraspaces</title>
       <meta
         name="description"
         content="This is the space component for Ultraspaces from Ultracobra"

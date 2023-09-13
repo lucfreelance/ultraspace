@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 const PageContainer = styled.div`
   display: flex;
@@ -41,7 +41,7 @@ const Banner = styled.img`
 
 const Button = styled.button`
   padding: 10px 20px;
-  border: none;
+  border: 2px solid white; /* Borde blanco */
   border-radius: 4px;
   background-color: #4caf50;
   color: white;
@@ -63,15 +63,82 @@ const Anchor = styled.a`
   text-decoration: none;
 `;
 
+const MessageContainer = styled.div`
+  line-height: 1.5;
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+const MiniButton = styled.button`
+  padding: 10px 20px;
+  border: 2px solid white; /* Borde blanco */
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #45a049;
+  }
+`;
+
+const HomeButton = styled.button`
+  padding: 10px 20px;
+  border: 2px solid white; /* Borde blanco */
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #1e87db;
+  }
+`;
+
+const ShareButton = styled.button`
+  padding: 10px 20px;
+  border: 2px solid white; /* Borde blanco */
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #1e87db;
+  }
+`;
+
 const Space1 = () => {
   const [message, setMessage] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
+
   const audioUrl =
-    'https://www.elongsound.com/images/mp3/reggaedrum_09_167a_bytuneloniration.mp3'; // Reemplaza con la URL del sonido en línea
-  const imageUrl = 'https://i.imgur.com/rNrrmlf.png'; // Reemplaza con la URL de la imagen que deseas
+    'https://www.elongsound.com/images/mp3/reggaedrum_09_167a_bytuneloniration.mp3';
+  const imageUrl = 'https://i.imgur.com/rNrrmlf.png';
 
   const handleClick = () => {
     setMessage('Where you can have fun and take cool breaks!');
     playAudio();
+    setShowMessage(true);
+  };
+
+  const handleReset = () => {
+    setMessage('');
+    setShowMessage(false);
   };
 
   const playAudio = () => {
@@ -86,11 +153,22 @@ const Space1 = () => {
           Space [1]
         </Anchor>
         <Header>Welcome to Ultraspaces</Header>
-        <Banner src={'https://i.imgur.com/rNrrmlf.png'} alt="Ultraspaces friends" />
-        <Button onClick={handleClick}>
+        <Banner src={imageUrl} alt="Ultraspaces friends" />
+        <Button onClick={handleClick}> 
           Statement 🚀
         </Button>
-        {message && <div dangerouslySetInnerHTML={{ __html: message }} />}
+        {showMessage && (
+          <div><br />
+            <MessageContainer>
+              <div dangerouslySetInnerHTML={{ __html: message }} />
+            </MessageContainer>
+            <ButtonGroup>
+              <ShareButton>Share[Soon]</ShareButton>
+              <MiniButton onClick={handleReset}>Reset</MiniButton>
+              <HomeButton onClick={() => window.location.href = "/spaces"}>Home</HomeButton>
+            </ButtonGroup>
+          </div>
+        )}
       </Container>
     </PageContainer>
   );
